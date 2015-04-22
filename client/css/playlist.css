@@ -1,0 +1,20 @@
+.playlist, .song{  
+  display: block;
+  padding: 5px;
+  margin: 5px;
+  background-color: #ccc;
+  border: 1px solid #aaa;
+  width: 200px;
+  cursor: move;
+  float: left;
+  clear: both;
+}
+.edit {
+	float: left;
+	cursor: pointer;
+	padding-left: 15px;
+}
+.delete {
+	float: left;
+	cursor: pointer;
+}

@@ -1,0 +1,39 @@
+<body>
+	{{>Master}}
+</body>
+
+
+<template name='Master'>
+	<div id='toolbar'>
+		<div class='text_button' id='songs_page'>songs</div>
+		<div class='text_button' id='playlists_page'>playlists</div>
+	</div>
+	{{ >Template.dynamic template=template_name }}
+</template>
+
+<template name='Songs'>
+	<div>song list</div>
+	<div id='songs'>
+		{{#each songs}}
+			<div class='song'>{{name}}</div>
+		{{/each}}
+	</div>
+</template>
+
+<template name='Playlists'>
+	<div>playlist list</div>
+	<div id='playlists'>
+		{{#each playlists}}
+			<div class='playlist'>{{name}}</div><div class='delete'>X</div><div class='edit'>edit</div>
+		{{/each}}
+	</div>
+</template>
+
+<template name='CustomizePlaylist'>
+	<div>Playlist order for {{playlist.name}}</div>
+	<div id='song_order'>
+	{{#each playlist_elements}}
+		<div class='song'>{{song.name}} {{song.song.position}}</div>
+	{{/each}}
+	</div>
+</template>
